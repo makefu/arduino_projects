@@ -1,3 +1,16 @@
+# About (by Felix)
+
+I started with my brand new arduino uno and had some big problems with the
+original arduino ide as it simply won't write the flash due to "identity
+something". Therefore i searched the web in order to find a Makefile which
+would actually work for me.
+
+I had to change the baud rate in the makefile but otherwise it stayed the
+same. This project will be used to finally start with arduino and use the
+knowledge of this 1 evening session in order to get code of other people
+running on my UNO.
+
+
 # About (by Mark Hellewell)
 
 I was having some trouble getting avr-gcc to compile arduino sketches on Arch Linux using the Makefile from ardunio.cc.  This is my modified Makefile, that now works OK.  I'm using [the Arduino AUR package](http://aur.archlinux.org/packages.php?ID=8388 "AUR package for arduino").
