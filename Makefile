@@ -35,7 +35,7 @@
 TARGET = main
 USER_SRC = main.c
 
-PORT = /dev/ttyUSB*
+PORT = /dev/ttyACM*
 ARDUINO = /usr/share/arduino/hardware/arduino/cores/arduino
 
 C_MODULES =  \
@@ -54,7 +54,6 @@ SRC = $(C_MODULES) $(USER_SRC)
 MCU = atmega328p
 F_CPU = 16000000
 FORMAT = ihex
-UPLOAD_RATE = 57600
 
 # Name of this Makefile (used for "make depend").
 MAKEFILE = Makefile
@@ -94,7 +93,7 @@ AVRDUDE_PROGRAMMER = arduino
 AVRDUDE_PORT = $(PORT)
 AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 AVRDUDE_FLAGS = -F -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) \
-  -b $(UPLOAD_RATE) -V
+  -V -v
 
 # Program settings
 CC = avr-gcc
